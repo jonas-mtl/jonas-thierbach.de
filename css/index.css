@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+  user-select: none;
+}
+
+header {
+  font-family: 'Poppins';
+  color: #353535;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  background-color: #353535;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+header nav a:hover {
+  background-color: #515151;
+  padding: 10px 25px;
+}
+
+.landing {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing img {
+  z-index: -1;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.main {
+  font-family: 'Poppins';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .planCont {
+  background-color: #f5f5f5;
+  padding: 20px 40px;
+  margin: 35px 15px 50px 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+#quote {
+  position: absolute;
+  font-family: 'Pacifico';
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.887) 0px 10px 10px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+#taskinput {
+  border-radius: 30px;
+  padding: 5px 10px;
+  border: 0px;
+}
+
+button {
+  background-color: white;
+  border-radius: 30px;
+  border: 0px;
+  padding: 5px 10px;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+.main .planCont:hover {
+  box-shadow: rgba(100, 100, 111, 0.03) 0px 7px 29px 0px;
+}

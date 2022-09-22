@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="icon" href="./favicon.png" />
+    <title>Jonas Thierbach</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Jonas' Webseite</h1>
+        <nav>
+          <a href="./index.html">Home</a>
+          <a href="https://www.aes-maintal.de/" target="_blank">Schule</a>
+        </nav>
+      </header>
+      <div class="landing">
+        <p style="width: 1000px; text-align: center" id="quote"></p>
+        <img
+          src="https://img.freepik.com/free-vector/night-ocean-landscape-full-moon-stars-shine_107791-7397.jpg?w=1060&t=st=1663741789~exp=1663742389~hmac=c72fd6c1c4e3acbb27729ae92f7961f173eed0d6aaa35ae6c67eda83fbdf378a"
+          alt="Wallpaper"
+        />
+      </div>
+      <div class="main">
+        <div class="planCont">
+          <h3>Stundenplan</h3>
+          <div class="planner">
+            <p id="weekday">Heute</p>
+            <ul>
+              <li id="1s">Informatik</li>
+              <li id="2s">Chemie</li>
+              <li id="3s">Kunst</li>
+            </ul>
+          </div>
+        </div>
+        <div class="planCont">
+          <h3>Hausaufgaben</h3>
+          <div class="planner">
+            <input id="taskinput" type="text" placeholder="Aufgabe" />
+            <button onclick="addTask()">Hinzufügen</button>
+            <ul id="lists"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var apiUrl = 'https://api.quotable.io/random';
+      fetch(apiUrl)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          let p = document.createElement('p');
+          console.log(data.content.length > 30);
+          if (data.content.length > 80) {
+          }
+          let cnt = document.createTextNode(data.content);
+
+          p.appendChild(cnt);
+          document.getElementById('quote').appendChild(p);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+
+      let tasks = [];
+
+      const weekdays = [
+        { name: 'Montag', stunden: ['Englisch', 'Deutsch', 'Spanisch'] },
+        { name: 'Dienstag', stunden: ['Englisch', 'Deutsch', 'Spanisch'] },
+        { name: 'Mittwoch', stunden: ['Informatik', 'Chemie', 'Kunst'] },
+        { name: 'Donnerstag', stunden: ['Deutsch', 'Mathe', 'Chemie'] },
+        { name: 'Freitag', stunden: ['Englisch', 'Physik', 'Geschichte'] },
+      ];
+
+      const d = new Date();
+      let dayRaw = d.getDay();
+
+      document.getElementById('weekday').innerHTML = weekdays[dayRaw - 1].name;
+      weekdays[dayRaw - 1].stunden.forEach((stunde, i) => {
+        console.log(i + 1, stunde);
+        document.getElementById(`${i + 1}s`).innerHTML = stunde;
+      });
+
+      const addTask = () => {
+        let inputValue = document.getElementById('taskinput').value;
+        let li = document.createElement('li');
+        let t = document.createTextNode(inputValue);
+        li.appendChild(t);
+        if (inputValue === '') {
+          alert('Du musst etwas eingeben!');
+        } else {
+          document.getElementById('lists').appendChild(li);
+        }
+        document.getElementById('taskinput').value = '';
+      };
+    </script>
+  </body>
+</html>
