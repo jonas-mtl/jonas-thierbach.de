@@ -166,8 +166,8 @@ header {
 }
 
 .blur {
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   position: absolute;
@@ -177,8 +177,8 @@ header {
 }
 
 .mobileNav {
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
   justify-content: center;
   color: $primary-text;
   position: fixed;
@@ -217,7 +217,7 @@ header {
     .activeTab {
       background: #ffff;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-      transition: all 300ms ease-in-out;
+      transition: 300ms ease-in-out;
 
       &:hover {
         box-shadow: none;

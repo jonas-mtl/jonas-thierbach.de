@@ -124,7 +124,7 @@
 
         button {
           background-color: rgba(255, 255, 255, 0);
-          transition: all 0.3s ease-in-out;
+          transition: 0.3s ease-in-out;
           font-size: 1.2rem;
           position: relative;
           text-align: center;
@@ -139,10 +139,10 @@
           &:after {
             content: '';
             background-color: rgba(0, 0, 0, 0.678);
-            transition: all 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
             position: absolute;
             bottom: 16px;
-            height: 2px;
+            height: 3px;
             width: 0%;
             left: 0;
           }
@@ -166,7 +166,6 @@
       -webkit-appearance: none;
       width: 160px;
       height: 20px;
-      margin: 10px 50px;
       background: linear-gradient(to right, #9d9d9d 0%, #636363 100%);
       background-size: 150px 10px;
       background-position: center;
