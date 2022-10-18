@@ -167,6 +167,7 @@ header {
 
 .blur {
   transition: all 200ms ease-in-out;
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   position: absolute;
   height: 100%;
