@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  justify-content: center;
+  display: flex;
+
+  .container {
+    margin-top: 80px;
+    width: 50vw;
+
+    @media screen and (max-width: 981px) {
+      width: 85vw;
+    }
+
+    span {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+      h1 {
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        color: #35383c;
+      }
+    }
+
+    h3 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-family: 'Libre Baskerville', sans-serif;
+      letter-spacing: 10px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #35383c;
+    }
+
+    li {
+      list-style-type: circle;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+      color: #35383c;
+
+      a {
+        border-bottom: 1px solid #c1c1c1;
+        border-bottom-color: #88888838;
+        text-decoration-line: none;
+        color: rgb(135, 118, 92);
+
+        &:hover {
+          border-bottom-color: rgb(135, 118, 92);
+        }
+      }
+    }
+  }
+}
