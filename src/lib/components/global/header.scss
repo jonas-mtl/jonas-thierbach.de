@@ -166,6 +166,7 @@ header {
 }
 
 .blur {
+  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
@@ -176,6 +177,7 @@ header {
 }
 
 .mobileNav {
+  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   justify-content: center;
   color: $primary-text;
